@@ -7,6 +7,5 @@ namespace WPFRepetition.Managers
         private DataModel _dataModel = new DataModel();
 
         public DataModel DataModel => _dataModel;
-        
     }
 }

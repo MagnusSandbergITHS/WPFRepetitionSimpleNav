@@ -10,11 +10,18 @@
     mc:Ignorable="d">
     <DockPanel>
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-            <Button Command="{Binding CountDownCommand}" Content="Count Down" FontSize="60" />
+            <Button
+                Command="{Binding CountDownCommand}"
+                Content="Count Down"
+                FontSize="60" />
             <TextBlock Width="50" Text="{Binding Counter, UpdateSourceTrigger=PropertyChanged}" />
         </StackPanel>
-        <StackPanel DockPanel.Dock="Left" />
-        <StackPanel DockPanel.Dock="Right" />
+        <StackPanel DockPanel.Dock="Left" >
+            <Button FontSize="60"  Command="{Binding NavigateRightCommand}" Content="Go left" />
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Right">
+            <Button FontSize="60" Command="{Binding NavigateCenterCommand}" Content="Go right" />
+        </StackPanel>
         <StackPanel DockPanel.Dock="Bottom" />
     </DockPanel>
 </UserControl>
