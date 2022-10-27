@@ -1,5 +1,5 @@
-﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
-using Microsoft.Toolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using WPFRepetition.Managers;
 using WPFRepetition.Models;
 
@@ -7,20 +7,9 @@ namespace WPFRepetition.ViewModels
 {
     class LeftViewModel : ObservableObject
     {
-
-        #region Fields
-
         private readonly DataModel _dataModel;
 
-        #endregion
-
-        #region Commands
-
-        public IRelayCommand CountUpCommand { get; }
-
-        #endregion
-
-        #region Props
+        public IRelayCommand CountDownCommand { get; }
 
         public int Counter
         {
@@ -32,12 +21,10 @@ namespace WPFRepetition.ViewModels
             }
         }
 
-        #endregion
-
         public LeftViewModel(DataModel dataModel)
         {
             _dataModel = dataModel;
-            CountUpCommand = new RelayCommand(() => Counter++);
+            CountDownCommand = new RelayCommand(() => Counter--);
         }
     }
 }

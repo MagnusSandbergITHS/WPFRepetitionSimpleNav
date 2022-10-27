@@ -10,7 +10,10 @@
     mc:Ignorable="d">
     <DockPanel>
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-            <Button Command="{Binding CountDownCommand}" Content="Count Down" />
+            <Button
+                Command="{Binding CountUpCommand}"
+                Content="Count Up"
+                FontSize="60" />
             <TextBlock Width="50" Text="{Binding Counter, UpdateSourceTrigger=PropertyChanged}" />
         </StackPanel>
         <StackPanel DockPanel.Dock="Left" />

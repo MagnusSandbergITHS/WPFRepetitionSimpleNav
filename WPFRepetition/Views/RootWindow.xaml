@@ -16,6 +16,9 @@
             <DataTemplate DataType="{x:Type viewmodels:LeftViewModel}">
                 <views:LeftView />
             </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:CenterViewModel}">
+                <views:CenterView />
+            </DataTemplate>
             <DataTemplate DataType="{x:Type viewmodels:RightViewModel}">
                 <views:RightView />
             </DataTemplate>
@@ -26,6 +29,7 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <Button Command="{Binding NavigateLeftCommand}" Content="Show Left" />
+            <Button Command="{Binding NavigateCenterCommand}" Content="Show Center" />
             <Button Command="{Binding NavigateRightCommand}" Content="Show Right" />
         </StackPanel>
 
